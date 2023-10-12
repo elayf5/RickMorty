@@ -1,0 +1,43 @@
+/* Default styles for larger screens */
+
+body {
+    font-size: 30px;
+    height: 10%;
+  }
+  
+  .todo-item {
+    padding: 10px;
+    margin: 10px 0;
+    height: 10%;
+    width:30%
+  }
+  
+  .episodes ul {
+    flex-wrap: wrap;
+    justify-content: left; /* Adjust this to control spacing between episodes */
+  }
+  
+
+  
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+      margin: 10px;
+    }
+  
+    .todo-item {
+      padding: 8px;
+      margin: 8px 0;
+    }
+  
+    .todo-item button {
+      padding: 8px 12px;
+      font-size: 14px;
+      height: 10%;
+      width:30%
+
+    }
+  }
+  
