@@ -22,30 +22,26 @@ const Home = () => {
   }, []);
 
   return (
-    <div  >
+    <div >
       <h2>Welcome to Rick and Morty Fan Page</h2>
-      <div>
-        <img src={RickMortyWall } />
+      <div >
+        <img src={RickMortyWall } width={'80%'} height={'10%'} />
       </div>
-
       <div style={{ display: 'flex', justifyContent: 'left' }}>
         {characters.map((character) => (
           <div
             key={character.id}
-            style={{ textAlign: 'center', padding: '100px' }}
+            style={{ textAlign: 'center', padding: '20px' }}
           >
             <img
               src={character.image}
               alt={character.name}
-              style={{ width: '250px' }} // Set your desired width
+              style={{ width: '250px', paddingLeft: '100px' }} 
             />
             <p>{character.name}</p>
-            {/* Add more character details as needed */}
           </div>
         ))}
       </div>
-
-      {/* Add content for your landing page here */}
     </div>
   );
 };
