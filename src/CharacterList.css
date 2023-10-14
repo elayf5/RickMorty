@@ -1,0 +1,38 @@
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100% ; 
+}
+
+.character-card {
+  margin: 10px 10px; /* Add margin between cards */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #f8f8f8;
+}
+
+
+.character-card img {
+  max-width: 100%;
+}
+
+.character-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-details {
+  margin: 10px 10px; /* Add margin between cards */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #f8f8f8;
+  width: 100% ; 
+
+  
+  
+}

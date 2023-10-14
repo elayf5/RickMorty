@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CharacterCard from './CharacterCard';
 import CharacterDetails from './CharacterDetails'
+import './CharacterList.css';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -116,9 +117,10 @@ const Characters = () => {
       </div>
 
       <div className="character-list">
-      {isDetailsOpen ? <CharacterDetails character={selectedCharacter} onClose={handleModalClose} /> : filteredCharacters.map((character) => (          
-          <CharacterCard key={character.id} character={character} onClick={() => handleCharacterClick(character)} />
-          ) ) }         
+        {        isDetailsOpen ? <CharacterDetails character={selectedCharacter} onClose={handleModalClose} />:
+          <div className="character-card-container" style={{width: '100%'}}>
+            {filteredCharacters.map((character) => (<CharacterCard key={character.id} character={character} onClick={() => handleCharacterClick(character)} />))}
+          </div>}
       </div>
     </div>
   );

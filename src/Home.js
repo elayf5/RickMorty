@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import RickMortyWall from "./RickMortyWall.jpg"
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -23,6 +24,9 @@ const Home = () => {
   return (
     <div >
       <h2>Welcome to Rick and Morty Fan Page</h2>
+      <div>
+        <img src={RickMortyWall } />
+      </div>
 
       <div style={{ display: 'flex', justifyContent: 'left' }}>
         {characters.map((character) => (

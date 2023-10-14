@@ -2,7 +2,7 @@ import React from 'react';
 
 const CharacterDetails = ({ character, onClose }) => {
   return (
-    <div className="character-details">
+    <div className="character-details" style={{height: '30%'}}>
       <button onClick={onClose}>Close</button>
       <img src={character.image} alt={character.name} />
       <h2>{character.name}</h2>
