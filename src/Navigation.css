@@ -1,7 +1,6 @@
 /* Navigation.css */
 nav {
-    background-color: #333;
-    color: white;
+    background-color: #9CC1D7;
     padding: 10px;
   }
   
@@ -22,5 +21,6 @@ nav {
   
   a:hover {
     text-decoration: underline;
+    color: #97ABB1
   }
   

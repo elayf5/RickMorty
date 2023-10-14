@@ -3,6 +3,8 @@
 body {
     font-size: 30px;
     height: 10%;
+    background-color: #97ABB1; /* Set your desired background color */
+    
   }
   
   .todo-item {

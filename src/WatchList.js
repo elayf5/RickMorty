@@ -49,19 +49,26 @@ const WatchList = () => {
   };
 
   return (
-    <div>
+    <div >
       <h2> My Watch List Page</h2>
-      <div>
-        <input
-          type="text"
-          placeholder="Add a new episode with format s(xx)e(xx)"
-          value={newEpisode}
-          onChange={handleInputChange}
-          style={{ width: '40%', padding: '10px', fontSize: '18px' }}
-        />
+      <div >
+      <input
+        type="text"
+        placeholder="Add a new episode with format s(xx)e(xx)"
+        value={newEpisode}
+        onChange={handleInputChange}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleAddEpisode();
+          }
+        }
+      }
+    style={{ width: '40%', padding: '10px', fontSize: '18px' , backgroundColor: ""}}
+/>
+
         <button
           onClick={handleAddEpisode}
-          style={{ padding: '10px', fontSize: '18px', marginLeft: '10px' }}
+          style={{ padding: '10px', fontSize: '18px', marginLeft: '10px', backgroundColor:''}}
         >
           Add
         </button>

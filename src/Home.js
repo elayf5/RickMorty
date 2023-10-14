@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div >
+    <div  >
       <h2>Welcome to Rick and Morty Fan Page</h2>
       <div>
         <img src={RickMortyWall } />
