@@ -25,22 +25,8 @@ const Home = () => {
     <div >
       <h2>Welcome to Rick and Morty Fan Page</h2>
       <div >
-        <img src={RickMortyWall } width={'80%'} height={'10%'} />
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'left' }}>
-        {characters.map((character) => (
-          <div
-            key={character.id}
-            style={{ textAlign: 'center', padding: '20px' }}
-          >
-            <img
-              src={character.image}
-              alt={character.name}
-              style={{ width: '250px', paddingLeft: '100px' }} 
-            />
-            <p>{character.name}</p>
-          </div>
-        ))}
+        <img src={RickMortyWall } width={'60%'} height={'10%'} />
+        <h3 > Rick And Morty</h3>
       </div>
     </div>
   );
