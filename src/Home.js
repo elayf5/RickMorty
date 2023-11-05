@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RickMortyWall from "./RickMortyWall.jpg"
+import RickMortyWall from './RickMortyWall.jpg';
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -7,13 +7,13 @@ const Home = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response1 = await fetch('https://rickandmortyapi.com/api/character/1');
-        const character1 = await response1.json();
-
-        const response2 = await fetch('https://rickandmortyapi.com/api/character/2');
-        const character2 = await response2.json();
-
-        setCharacters([character1, character2]);
+        const characterData = []; 
+        for (let charIndex = 1; charIndex < 6; charIndex++) {
+          const response = await fetch(`https://rickandmortyapi.com/api/character/${charIndex}`);
+          const character = await response.json();
+          characterData.push(character); 
+        }
+        setCharacters(characterData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -25,7 +25,7 @@ const Home = () => {
     <div >
       <h2>Welcome to Rick and Morty Fan Page</h2>
       <div >
-        <img src={RickMortyWall } width={'80%'} height={'10%'} />
+        <img src={RickMortyWall} alt={"WallPaper"} width={'80%'} height={'10%'} />
       </div>
       <div style={{ display: 'flex', justifyContent: 'left' }}>
         {characters.map((character) => (
@@ -36,7 +36,7 @@ const Home = () => {
             <img
               src={character.image}
               alt={character.name}
-              style={{ width: '250px', paddingLeft: '100px' }} 
+              style={{ width: '250px', paddingLeft: '75px' }} 
             />
             <p>{character.name}</p>
           </div>
