@@ -11,7 +11,7 @@ const Characters = () => {
   const [selectedGender, setSelectedGender] = useState('');
   const [selectedSpecies, setSelectedSpecies] = useState('');
   const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false); // Track details modal state
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false); 
   const [filteredCharacters, setFilteredCharacters] = useState([]);
 
   
@@ -29,7 +29,6 @@ const Characters = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.error === "There is nothing here") {
-          // Handle the case when there are no characters
           setFilteredCharacters([]);
           setHasNextPage(false);
                 } else {
@@ -41,12 +40,12 @@ const Characters = () => {
           });
           if (filtered.length === 0) {
             setFilteredCharacters([]);
-            setHasNextPage(false); // No characters in the filter means no next page
-            setHasPrevPage(false); // No characters in the filter means no next page
+            setHasNextPage(false); 
+            setHasPrevPage(false);
 
           } else {
             setFilteredCharacters(filtered);
-            setHasNextPage(!!data.info.next); // Set hasNextPage based on the API response
+            setHasNextPage(!!data.info.next); 
             setHasPrevPage(!!data.info.prev);
 
           }
